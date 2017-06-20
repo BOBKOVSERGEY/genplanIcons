@@ -1,0 +1,12 @@
+.error {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  transition: all .3s;
+  height: 130px;
+  background: #ccc; }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4uc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHFCQUFhO0VBQWIsY0FBYTtFQUNiLDBCQUFtQjtFQUFuQixvQkFBbUI7RUFDbkIseUJBQXVCO0VBQXZCLHdCQUF1QjtFQUN2QixvQkFBbUI7RUFDbkIsY0FBYTtFQUNiLGlCQUFnQixFQUNqQiIsImZpbGUiOiJtYWluLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5lcnJvciB7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gIHRyYW5zaXRpb246IGFsbCAuM3M7XHJcbiAgaGVpZ2h0OiAxMzBweDtcclxuICBiYWNrZ3JvdW5kOiAjY2NjO1xyXG59Il19 */
