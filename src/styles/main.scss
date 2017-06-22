@@ -125,7 +125,7 @@
   }
 
   &__tooltip {
-    display: block;
+    display: none;
     width: 131px;
     font-family: $fontFamily;
     position: absolute;
@@ -239,3 +239,5 @@
   left: 14px;
   border: 1px solid #fff;
 }
+
+@import "media";

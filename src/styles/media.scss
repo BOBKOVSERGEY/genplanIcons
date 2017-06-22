@@ -1,0 +1,96 @@
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+
+@media only screen and (max-width : 992px) {
+
+}
+
+
+@media only screen and (max-width : 768px) {
+
+}
+
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 375px) {
+  .genplan__icon-quarter {
+    padding: 3px 5px;
+
+    &:before {
+      left: 6px;
+      bottom: -13px;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-right: 7px solid $bgQuarter;
+    }
+  }
+  .icon-quarter__number {
+    font-size: 9px;
+    padding-right: 6px;
+
+    &:after {
+      top: 1px;
+      height: 10px;
+    }
+  }
+  .icon-quarter__text {
+    font-size: 7px;
+    padding-left: 4px;
+  }
+
+  .genplan__icon-housing {
+    min-width: 26px;
+    padding: 3px 0px;
+
+    &:before {
+      left: 8px;
+      bottom: -18px;
+      border-top: 13px solid transparent;
+      border-bottom: 13px solid transparent;
+      border-right: 10px solid $bgHousing;
+    }
+  }
+
+  .icon-housing__number {
+    font-size: 9px;
+  }
+
+  .icon-housing__stock-text {
+    font-size: 7px;
+  }
+
+  .icon-housing__stock-icon {
+    left: 5px;
+
+  }
+
+  .icon-housing__stop-icon {
+    left: 5px;
+  }
+
+  .genplan__icon-housing_7-stop {
+    padding-top: 13px;
+    background: $bgHousingStop;
+
+    &:before {
+      content: "";
+      border-right: 10px solid $bgHousingStop;
+    }
+  }
+
+}
+
+@media only screen and (max-width : 320px) {
+
+
+}
+
+
+
+
