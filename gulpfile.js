@@ -74,7 +74,7 @@ gulp.task('watch', function () {
     proxy: "genplanIcons"
   });
   gulp.watch(path.sass.src, ['sass'])
-  gulp.watch(['*.*', 'dist/css/*.css', 'dist/images/*.*']).on('change', browserSync.reload);
+  gulp.watch(['*.*', 'dist/css/*.css', 'dist/images/*.*', 'dist/js/*.*']).on('change', browserSync.reload);
   gulp.watch('src/img/*', ['compress']);
 })
 

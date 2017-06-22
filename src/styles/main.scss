@@ -1,8 +1,241 @@
-.error {
+@import "variables";
+
+.container {
+
+}
+.genplan {
+  border: 1px solid #C3CAD9;
+  background: #fff;
+  padding: 10px;
+  margin: 10px 0;
+  position: relative;
+
+  &__img {
+    max-width: 100%;
+  }
+
+  &__icon-quarter {
+    position: absolute;
+    top: 30%;
+    left: 9%;
+    background-color: $bgQuarter;
+    color: #fff;
+    padding: 3px 11px;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-family: $fontFamily;
+    border-radius: 3px 3px 3px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.45);
+    transition: all .3s;
+    cursor: pointer;
+
+    &_14 {
+      top: 21%;
+      left: 25%;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 12px;
+      bottom: -26px;
+      width: 0;
+      height: 0;
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-right: 14px solid $bgQuarter;
+      transform: rotate(-90deg);
+      border-radius: 3px;
+    }
+  }
+
+  &__icon-housing {
+    position: absolute;
+    top: 61%;
+    left: 38%;
+    min-width: 44px;
+    background-color: $bgHousing;
+    color: #fff;
+    padding: 3px 6px;
+    text-align: center;
+    font-weight: normal;
+    font-family: $fontFamily;
+    border-radius: 3px 3px 0px 0px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.45);
+    transition: all .3s;
+    cursor: pointer;
+
+    &_16b-stock {
+      top: 37%;
+      left: 49%;
+    }
+
+    &_8-stock {
+      top: 13%;
+      left: 75.5%;
+    }
+
+    &_14 {
+      top: 50%;
+      left: 83%;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 15px;
+      bottom: -29px;
+      width: 0;
+      height: 0;
+      border-top: 22px solid transparent;
+      border-bottom: 22px solid transparent;
+      border-right: 14px solid $bgHousing;
+      transform: rotate(-90deg);
+    }
+
+    &_7-stop {
+      top: 33%;
+      left: 75.5%;
+      padding-top: 9px;
+      background: $bgHousingStop;
+      &:before {
+        content: "";
+        position: absolute;
+        left: 15px;
+        bottom: -29px;
+        width: 0;
+        height: 0;
+        border-top: 22px solid transparent;
+        border-bottom: 22px solid transparent;
+        border-right: 14px solid $bgHousingStop;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  &__tooltip {
+    display: block;
+    width: 131px;
+    font-family: $fontFamily;
+    position: absolute;
+    background-color: $bgHousing;
+    opacity: 1;
+    border-radius: 3px;
+    padding: 5px;
+    color: #fff;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.45);
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 27px;
+      bottom: -14px;
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-right: 10px solid $bgHousing;
+      transform: rotate(-90deg);
+    }
+  }
+}
+.tooltip__wrapper {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all .3s;
-  height: 130px;
-  background: #ccc;
+}
+.tooltip__number {
+  font-size: 10px;
+  padding-right: 10px;
+  position: relative;
+  &:after {
+    width: 1px;
+    top: -1px;
+    right: 0;
+    height: 16px;
+    content: "";
+    position: absolute;
+    background-color: #fff;
+
+  }
+}
+.tooltip__text {
+  font-size: 8px;
+  padding-left: 10px;
+}
+.tooltip__list {
+  margin: 7px 0;
+  font-size: 8px;
+}
+.icon-quarter__number {
+  font-size: 19px;
+  padding-right: 11px;
+  position: relative;
+
+
+  &:after {
+    width: 1px;
+    top: 6px;
+    right: 0;
+    height: 16px;
+    content: "";
+    position: absolute;
+    background-color: #fff;
+
+  }
+}
+.icon-quarter__text {
+  font-size: 9px;
+  padding-left: 11px;
+}
+
+.icon-housing__number {
+  font-size: 19px;
+}
+.icon-housing__stock-text {
+  font-size: 9px;
+  margin-top: 3px;
+  color: #fbb03b;
+}
+
+.icon-housing__stock-icon {
+  position: absolute;
+  background: #fbb03b;
+  font-size: 8px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  top: -9px;
+  left: 14px;
+  border: 1px solid #fff;
+}
+
+.icon-housing__stop-icon {
+  position: absolute;
+  background: #ff3a52;
+  font-size: 8px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  top: -9px;
+  left: 14px;
+  border: 1px solid #fff;
 }
