@@ -72,6 +72,7 @@
     box-shadow: 2px 2px 5px rgba(0,0,0,.45);
     transition: transform 0.3s;
     cursor: pointer;
+    z-index: 9;
 
     &_stock-height {
       height: 48px;
@@ -133,8 +134,9 @@
   }
 
   &__tooltip {
+    display: block;
     position: absolute;
-    z-index: 10;
+    z-index: 999;
     bottom: -10px;
     left: -11px;
     visibility: hidden;
@@ -142,7 +144,6 @@
     font-family: $fontFamily;
     background-color: $bgHousing;
     opacity: 0;
-    display: block;
     transition: all .2s .2s ease-in;
     transform: translateY(-10px);
     border-radius: 3px;
@@ -165,10 +166,12 @@
   }
 }
 .masterTooltip:hover .genplan__tooltip {
+  display: block;
   visibility: visible;
-  transition: all .2s .1s ease-out;
+  transition: all 1s .1s ease-out;
   transform: translateY(0);
   opacity: 1;
+  z-index: 9999;
 }
 .tooltip__wrapper {
   width: 100%;
