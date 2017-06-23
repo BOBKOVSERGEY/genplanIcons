@@ -60,7 +60,8 @@
     position: absolute;
     top: 61%;
     left: 38%;
-    min-width: 44px;
+    width: 44px;
+    height: 33px;
     background-color: $bgHousing;
     color: #fff;
     padding: 3px 6px;
@@ -69,9 +70,16 @@
     font-family: $fontFamily;
     border-radius: 3px 3px 0px 0px;
     box-shadow: 2px 2px 5px rgba(0,0,0,.45);
-    transition: all .3s;
+    transition: transform 0.3s;
     cursor: pointer;
 
+    &_stock-height {
+      height: 48px;
+    }
+
+    &_stop-height {
+      height: 39px;
+    }
     &_16b-stock {
       top: 37%;
       left: 49%;
@@ -125,12 +133,18 @@
   }
 
   &__tooltip {
-    display: none;
+    position: absolute;
+    z-index: 10;
+    bottom: -10px;
+    left: -11px;
+    visibility: hidden;
     width: 131px;
     font-family: $fontFamily;
-    position: absolute;
     background-color: $bgHousing;
-    opacity: 1;
+    opacity: 0;
+    display: block;
+    transition: all .2s .2s ease-in;
+    transform: translateY(-10px);
     border-radius: 3px;
     padding: 5px;
     color: #fff;
@@ -150,8 +164,28 @@
     }
   }
 }
+.masterTooltip:hover .genplan__tooltip {
+  visibility: visible;
+  transition: all .2s .1s ease-out;
+  transform: translateY(0);
+  opacity: 1;
+}
 .tooltip__wrapper {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.tooltip__icon {
+  position: absolute;
+  width: 16px;
+  top: -15px;
+  height: 16px;
+  font-size: 8px;
+  background: #fbb03b;
+  border-radius: 50%;
+  border: 1px solid #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -177,6 +211,7 @@
 }
 .tooltip__list {
   margin: 7px 0;
+  text-align: left;
   font-size: 8px;
 }
 .icon-quarter__number {

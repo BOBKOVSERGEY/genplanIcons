@@ -45,7 +45,8 @@
   }
 
   .genplan__icon-housing {
-    min-width: 26px;
+    width: 26px;
+    height: 18px;
     padding: 3px 0px;
 
     &:before {
@@ -54,6 +55,13 @@
       border-top: 13px solid transparent;
       border-bottom: 13px solid transparent;
       border-right: 10px solid $bgHousing;
+    }
+
+    &_stock-height {
+      height: 31px;
+    }
+    &_stop-height {
+      height: 28px;
     }
   }
 
