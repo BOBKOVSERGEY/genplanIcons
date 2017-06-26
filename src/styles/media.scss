@@ -19,7 +19,7 @@
 }
 
 @media only screen and (max-width : 375px) {
-  .genplan__icon-quarter {
+  .icon-quarter {
     padding: 3px 5px;
 
     &:before {
@@ -29,22 +29,23 @@
       border-bottom: 10px solid transparent;
       border-right: 7px solid $bgQuarter;
     }
-  }
-  .icon-quarter__number {
-    font-size: 9px;
-    padding-right: 6px;
+    &__number {
+      font-size: 9px;
+      padding-right: 6px;
 
-    &:after {
-      top: 1px;
-      height: 10px;
+      &:after {
+        top: 1px;
+        height: 10px;
+      }
+    }
+    &__text {
+      font-size: 7px;
+      padding-left: 4px;
     }
   }
-  .icon-quarter__text {
-    font-size: 7px;
-    padding-left: 4px;
-  }
 
-  .genplan__icon-housing {
+
+  .icon-housing {
     width: 26px;
     height: 18px;
     padding: 3px 0px;
@@ -63,34 +64,37 @@
     &_stop-height {
       height: 28px;
     }
-  }
 
-  .icon-housing__number {
-    font-size: 9px;
-  }
+    &_7-stop {
+      padding-top: 13px;
+      background: $bgHousingStop;
 
-  .icon-housing__stock-text {
-    font-size: 7px;
-  }
+      &:before {
+        content: "";
+        border-right: 10px solid $bgHousingStop;
+      }
+    }
 
-  .icon-housing__stock-icon {
-    left: 5px;
+    &__number {
+      font-size: 9px;
+    }
 
-  }
+    &__stock-text {
+      font-size: 7px;
+    }
 
-  .icon-housing__stop-icon {
-    left: 5px;
-  }
+    &__stock-icon {
+      left: 5px;
 
-  .genplan__icon-housing_7-stop {
-    padding-top: 13px;
-    background: $bgHousingStop;
+    }
 
-    &:before {
-      content: "";
-      border-right: 10px solid $bgHousingStop;
+    &__stop-icon {
+      left: 5px;
     }
   }
+
+
+
 
 }
 
