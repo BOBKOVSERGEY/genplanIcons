@@ -5,29 +5,13 @@
 
 
 @media only screen and (max-width : 992px) {
-
-}
-
-
-@media only screen and (max-width : 768px) {
-
-}
-
-
-@media only screen and (max-width : 480px) {
-
-}
-
-@media only screen and (max-width : 375px) {
   .icon-quarter {
     padding: 3px 5px;
 
     &:before {
-      left: 6px;
-      bottom: -13px;
-      border-top: 10px solid transparent;
-      border-bottom: 10px solid transparent;
-      border-right: 7px solid $bgQuarter;
+      border-width: 7px 10px 0;
+      border-color: $bgQuarter transparent;
+      bottom: -7px;
     }
     &__number {
       font-size: 9px;
@@ -47,22 +31,34 @@
 
   .icon-housing {
     width: 26px;
-    height: 18px;
+    height: 11px;
     padding: 3px 0px;
 
     &:before {
-      left: 8px;
-      bottom: -18px;
-      border-top: 13px solid transparent;
-      border-bottom: 13px solid transparent;
-      border-right: 10px solid $bgHousing;
+      border-width: 10px 13px 0;
+      bottom: -9px;
+    }
+
+    &__stock-icon {
+      top: -6px;
+      font-size: 6px;
+      width: 12px;
+      height: 12px;
+      margin-left: -6px;
+    }
+    &__stop-icon {
+      top: -6px;
+      font-size: 6px;
+      width: 12px;
+      height: 12px;
+      margin-left: -6px;
     }
 
     &_stock-height {
-      height: 31px;
+      height: 23px;
     }
     &_stop-height {
-      height: 28px;
+      height: 20px;
     }
 
     &_7-stop {
@@ -71,32 +67,128 @@
 
       &:before {
         content: "";
-        border-right: 10px solid $bgHousingStop;
+        border-color: $bgHousingStop transparent;
       }
     }
 
     &__number {
-      font-size: 9px;
+      font-size: 6px;
     }
 
     &__stock-text {
+      font-size: 6px;
+    }
+  }
+
+  .tooltip-g {
+
+    &__list {
+      padding: 0 5px;
+    }
+  }
+
+}
+
+
+@media only screen and (max-width : 768px) {
+
+}
+
+
+@media only screen and (max-width : 480px) {
+  .icon-quarter {
+    padding: 3px 5px;
+
+    &:before {
+      border-width: 7px 10px 0;
+      border-color: $bgQuarter transparent;
+      bottom: -7px;
+    }
+    &__number {
+      font-size: 9px;
+      padding-right: 6px;
+
+      &:after {
+        top: 1px;
+        height: 10px;
+      }
+    }
+    &__text {
       font-size: 7px;
-    }
-
-    &__stock-icon {
-      left: 5px;
-
-    }
-
-    &__stop-icon {
-      left: 5px;
+      padding-left: 4px;
     }
   }
 
 
+  .icon-housing {
+    width: 26px;
+    height: 11px;
+    padding: 3px 0px;
+
+    &:before {
+      border-width: 10px 13px 0;
+      bottom: -9px;
+    }
+
+    &__stock-icon {
+      top: -6px;
+      font-size: 6px;
+      width: 12px;
+      height: 12px;
+      margin-left: -6px;
+    }
+    &__stop-icon {
+      top: -6px;
+      font-size: 6px;
+      width: 12px;
+      height: 12px;
+      margin-left: -6px;
+    }
+
+    &_stock-height {
+      height: 23px;
+    }
+    &_stop-height {
+      height: 20px;
+    }
+
+    &_7-stop {
+      padding-top: 13px;
+      background: $bgHousingStop;
+
+      &:before {
+        content: "";
+        border-color: $bgHousingStop transparent;
+      }
+    }
+
+    &__number {
+      font-size: 6px;
+    }
+
+    &__stock-text {
+      font-size: 6px;
+    }
+  }
+
+  .tooltip-g {
+
+    &__list {
+      padding: 0 5px;
+    }
+  }
+
+}
+
+@media only screen and (max-width : 375px) {
 
 
 }
+
+
+
+
+
 
 @media only screen and (max-width : 320px) {
 

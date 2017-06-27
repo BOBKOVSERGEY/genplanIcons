@@ -25,13 +25,12 @@
   text-transform: uppercase;
   font-weight: normal;
   font-family: $fontFamily;
-  border-radius: 3px 3px 3px 0px;
+  border-radius: 3px 3px 3px 3px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 2px 2px 5px rgba(0,0,0,.45);
   transition: all .3s;
-  cursor: pointer;
 
   &_14 {
     top: 21%;
@@ -42,19 +41,18 @@
     transform: translateY(-5px);
   }
 
-  &:before {
-    content: "";
+  /*&:before {
+    content: '';
     position: absolute;
-    left: 12px;
-    bottom: -26px;
+    border-style: solid;
+    border-width: 14px 20px 0;
+    border-color: $bgQuarter transparent;
+    display: block;
     width: 0;
-    height: 0;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-right: 14px solid $bgQuarter;
-    transform: rotate(-90deg);
-    border-radius: 3px;
-  }
+    z-index: 1;
+    bottom: -14px;
+    left: 0;
+  }*/
 
   &__number {
     font-size: 19px;
@@ -92,11 +90,15 @@
   text-align: center;
   font-weight: normal;
   font-family: $fontFamily;
-  border-radius: 3px 3px 0px 0px;
+  border-radius: 3px 3px 2px 2px;
   box-shadow: 2px 2px 5px rgba(0,0,0,.45);
-  transition: all 0.3s;
+  transition: all 1s;
   cursor: pointer;
   z-index: 1;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
 
   &_stock-height {
     height: 48px;
@@ -107,7 +109,7 @@
   }
   &_16b-stock {
     top: 37%;
-    left: 49%;
+    left: 49.5%;
   }
 
   &_8-stock {
@@ -121,21 +123,18 @@
     left: 83%;
   }
 
-  &:hover {
-    transform: translateY(-5px);
-  }
-
   &:before {
-    content: "";
+    content: '';
     position: absolute;
-    left: 15px;
-    bottom: -29px;
+    border-style: solid;
+    border-width: 14px 22px 0;
+    border-color: $bgHousing transparent;
+    display: block;
     width: 0;
-    height: 0;
-    border-top: 22px solid transparent;
-    border-bottom: 22px solid transparent;
-    border-right: 14px solid $bgHousing;
-    transform: rotate(-90deg);
+    z-index: 1;
+    bottom: -13px;
+    left: 0;
+    transition: all 1s;
   }
 
   &_7-stop {
@@ -144,16 +143,7 @@
     padding-top: 9px;
     background: $bgHousingStop;
     &:before {
-      content: "";
-      position: absolute;
-      left: 15px;
-      bottom: -29px;
-      width: 0;
-      height: 0;
-      border-top: 22px solid transparent;
-      border-bottom: 22px solid transparent;
-      border-right: 14px solid $bgHousingStop;
-      transform: rotate(-90deg);
+      border-color: $bgHousingStop transparent;
     }
   }
   &__number {
@@ -176,7 +166,8 @@
     justify-content: center;
     border-radius: 50%;
     top: -9px;
-    left: 14px;
+    left: 50%;
+    margin-left: -8px;
     border: 1px solid #fff;
   }
 
@@ -191,47 +182,42 @@
     justify-content: center;
     border-radius: 50%;
     top: -9px;
-    left: 14px;
+    left: 50%;
+    margin-left: -8px;
     border: 1px solid #fff;
+  }
+  &:hover:not(.icon-housing_7-stop) {
+    position: absolute;
+    width: 180px;
+    height: 125px;
+    margin-top: -75px;
+    border-radius: 3px;
+    transform: translateX(-60px);
+    &:before {
+      left: 75px;
+      bottom: -9px;
+      border-width: 10px 10px 0;
+    }
   }
 
   &:hover .tooltip-g {
     visibility: visible;
     opacity: 1;
-    transition: all .4s 0.2s ease-out;
+    transition: all 1s .9s ease-out;
     transform: translateY(0px);
     z-index:9999;
+  }
+
+  &:hover:not(.icon-housing_7-stop) &__number {
+    font-size: 0px;
+    transition: all 1s .5s ease-out;
   }
 }
 
 .tooltip-g {
   visibility: hidden;
   opacity: 0;
-  position: absolute;
-  bottom: -10px;
-  left: -11px;
-  width: 131px;
-  font-family: $fontFamily;
-  background-color: $bgHousing;
-  transition: all .5s .5s ease-in;
-  transform: translateY(-10px);
-  border-radius: 3px;
-  padding: 5px;
-  color: #fff;
-  box-shadow: 2px 2px 5px rgba(0,0,0,.45);
-
-  &:before {
-    content: "";
-    position: absolute;
-    left: 27px;
-    bottom: -14px;
-    width: 0;
-    height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-right: 10px solid $bgHousing;
-    transform: rotate(-90deg);
-  }
+  position: relative;
 
   &__wrapper {
     width: 100%;
@@ -240,21 +226,9 @@
     justify-content: center;
     position: relative;
   }
-  &__icon {
-    position: absolute;
-    width: 16px;
-    top: -15px;
-    height: 16px;
-    font-size: 8px;
-    background: #fbb03b;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+
   &__number {
-    font-size: 10px;
+    font-size: 11px;
     padding-right: 10px;
     position: relative;
     &:after {
@@ -269,19 +243,29 @@
     }
   }
   &__text {
-    font-size: 8px;
+    font-size: 11px;
     padding-left: 10px;
   }
   &__list {
-    margin: 7px 0;
+    margin-top: 3px;
     text-align: left;
-    font-size: 8px;
+    font-size: 11px;
+  }
+  &__link {
+    font-size: 10px;
+    text-align: right;
+    margin: 5px 3px 0 0;
+    & a {
+      color: #fff;
+      text-decoration: none;
+
+      &:hover {
+        color: darken(#fff, 10%);
+      }
+    }
+
   }
 }
-
-
-
-
 
 
 @import "media";
